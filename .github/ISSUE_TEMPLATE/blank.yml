@@ -1,0 +1,13 @@
+name: Blank issue
+description: Create a blank issue for custom topics or architectural notes.
+title: "[CUSTOM]: "
+labels: ["triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Provide a clear and concise description of your topic.
+      placeholder: Write your details here...
+    validations:
+      required: true
