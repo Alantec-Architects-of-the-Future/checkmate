@@ -1,0 +1,27 @@
+name: Privileged
+description: Request authorized execution or review for sensitive automation pipelines.
+title: "[SEC-PRIV]: "
+labels: ["security", "privileged"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🛡️ Sovereign Authorization Protocol
+        Thanks for your interest in Alantec & Calibrated Mind workflows! ⚡
+
+        If you are not @jeanlaris or he didn't ask you directly to create an issue here, please start a discussion in our central channels instead.
+  - type: checkboxes
+    id: authorization
+    attributes:
+      label: Privileged Authorization Check
+      options:
+        - label: I'm @jeanlaris or he asked me directly to create an issue here *
+          required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Issue Content
+      description: Provide clear technical context for this privileged action.
+      placeholder: Describe the target matrix, parameters, or workflow changes...
+    validations:
+      required: true
