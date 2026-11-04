@@ -1,0 +1,24 @@
+name: "Node 096/500 - Alantec Sovereign Ingress Controller"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  ingress-controller:
+    name: "Execute Sovereign Ingress Controller Engine"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Sovereign Repository
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Initialize Ingress Controller Protocol
+        run: |
+          echo "Executing Node 096: Deploying sovereign ingress controller..."
+          git config user.name "Jean Laris"
+          git config user.email "architect@alantec.org"
+          echo "Node 096 executed successfully under Alantec industrial standards."
