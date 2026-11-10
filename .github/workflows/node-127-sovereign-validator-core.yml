@@ -2,19 +2,20 @@ name: "Node 127/500 - Alantec Sovereign Validator Core Integration"
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   execute-node:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout Sovereign Repository
         uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Matrix Sovereign Validation Protocol
         run: |
-          echo "=== Alantec Sovereign Pipeline Execution ==="
+          echo "Alantec Sovereign Pipeline Execution..."
+          git config --global user.name "Iron Laris"
+          git config --global user.email "ironlaris@alantec.org"
           echo "Node 127 synchronized and operational under modern runner specifications."
           echo "Pipeline Status: Ready for verification."
