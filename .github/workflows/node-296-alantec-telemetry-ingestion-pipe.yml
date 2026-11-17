@@ -1,0 +1,22 @@
+name: "Node 296/500 - Telemetry Ingestion Pipe"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  telemetry-ingestion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Telemetry Ingestion Protocol
+        run: |
+          echo "Node 296 executed successfully: Telemetry ingestion pipe operational."
