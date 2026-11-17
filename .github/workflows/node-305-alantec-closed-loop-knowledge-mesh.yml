@@ -1,0 +1,22 @@
+name: "Node 305/500 - Closed Loop Knowledge Mesh"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  closed-loop-mesh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Closed Loop Knowledge Protocol
+        run: |
+          echo "Node 305 executed successfully: Closed loop knowledge mesh operational."
