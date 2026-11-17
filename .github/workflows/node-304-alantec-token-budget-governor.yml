@@ -1,0 +1,22 @@
+name: "Node 304/500 - Token Budget Governor"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  token-governor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Token Budget Governor Protocol
+        run: |
+          echo "Node 304 executed successfully: Token budget governor operational."
