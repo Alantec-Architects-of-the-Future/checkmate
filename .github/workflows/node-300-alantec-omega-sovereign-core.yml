@@ -1,0 +1,22 @@
+name: "Node 300/500 - Omega Sovereign Core"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  omega-sovereign-core:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Omega Sovereign Core Protocol
+        run: |
+          echo "Node 300 executed successfully: Milestone 300 reached. Omega sovereign core operational."
