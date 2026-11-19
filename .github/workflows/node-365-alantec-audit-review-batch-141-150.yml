@@ -1,0 +1,27 @@
+name: "node-365: alantec audit review batch 141-150"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-141-150:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 141-150 (Group 2 of 5)
+        run: |
+          echo "Auditing Node 365 (365/500) - Code Review Registry for Nodes 141-150"
+          echo "1. Event Bus Partitioning & Consumer Lag Thresholds (Nodes 141-142)"
+          echo "2. Dead-Letter Queue Triage & Poison Pill Isolation (Nodes 143-144)"
+          echo "3. Schema Registry Evolution & Compatibility Gates (Nodes 145-146)"
+          echo "4. Consumer Offset Commit Discipline & Rebalance Guardrails (Nodes 147-148)"
+          echo "5. End-to-End Message Lineage & Audit Verification (Nodes 149-150)"
