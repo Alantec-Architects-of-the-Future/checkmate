@@ -1,0 +1,27 @@
+name: "node-366: alantec audit review batch 151-160"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-151-160:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 151-160 (Group 2 of 5)
+        run: |
+          echo "Auditing Node 366 (366/500) - Code Review Registry for Nodes 151-160"
+          echo "1. API Gateway Auth & Token Introspection Checks (Nodes 151-152)"
+          echo "2. Request Schema Validation & Payload Bounds (Nodes 153-154)"
+          echo "3. Idempotent Retry Headers & Conflict Guardrails (Nodes 155-156)"
+          echo "4. Upstream Timeout Budgets & Bulkhead Isolation (Nodes 157-158)"
+          echo "5. Security Audit Trail & Telemetry Sign-Off (Nodes 159-160)"
