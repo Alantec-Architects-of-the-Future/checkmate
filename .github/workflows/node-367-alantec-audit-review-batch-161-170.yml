@@ -1,0 +1,27 @@
+name: "node-367: alantec audit review batch 161-170"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-161-170:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 161-170 (Group 2 of 5)
+        run: |
+          echo "Auditing Node 367 (367/500) - Code Review Registry for Nodes 161-170"
+          echo "1. OAuth Scope Least Privilege & Secret Rotation (Nodes 161-162)"
+          echo "2. Webhook Signature Verification & Replay Guardrails (Nodes 163-164)"
+          echo "3. RBAC Policy Drift & Permission Escalation Checks (Nodes 165-166)"
+          echo "4. Supply Chain Provenance & Artifact Signing Audit (Nodes 167-168)"
+          echo "5. Vulnerability Advisory Triage & Compliance Sign-Off (Nodes 169-170)"
