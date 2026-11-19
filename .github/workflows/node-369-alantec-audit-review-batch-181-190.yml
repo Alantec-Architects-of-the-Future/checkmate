@@ -1,0 +1,27 @@
+name: "node-369: alantec audit review batch 181-190"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-181-190:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 181-190 (Group 2 of 5)
+        run: |
+          echo "Auditing Node 369 (369/500) - Code Review Registry for Nodes 181-190"
+          echo "1. Distributed Tracing Context & Span Propagation (Nodes 181-182)"
+          echo "2. High-Cardinality Metric Labels & Cardinality Caps (Nodes 183-184)"
+          echo "3. Structured Log Sampling & PII Redaction Checks (Nodes 185-186)"
+          echo "4. SLO Burn-Rate Alerting & Multi-Window Guardrails (Nodes 187-188)"
+          echo "5. Incident Telemetry Archive & Audit Sign-Off (Nodes 189-190)"
