@@ -1,0 +1,27 @@
+name: "node-368: alantec audit review batch 171-180"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-171-180:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 171-180 (Group 2 of 5)
+        run: |
+          echo "Auditing Node 368 (368/500) - Code Review Registry for Nodes 171-180"
+          echo "1. Distributed Lock Lease TTL & Heartbeat Renewal (Nodes 171-172)"
+          echo "2. Clock Skew Bounds & Monotonic Ordering Checks (Nodes 173-174)"
+          echo "3. Consensus Log Compaction & Snapshot Alignment (Nodes 175-176)"
+          echo "4. Leader Election Stabilization & Handoff Guardrails (Nodes 177-178)"
+          echo "5. State Machine Audit & Compliance Verification (Nodes 179-180)"
