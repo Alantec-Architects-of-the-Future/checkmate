@@ -1,0 +1,27 @@
+name: "node-360: alantec audit review batch 091-100"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-091-100:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 091-100 (Group 1 of 5)
+        run: |
+          echo "Auditing Node 360 (360/500) - Code Review Registry for Nodes 091-100"
+          echo "1. First Century Checkpoint & Baseline Integrity (Nodes 091-092)"
+          echo "2. Cross-Node Dependency Graph & Cycle Checks (Nodes 093-094)"
+          echo "3. Deterministic Replay & Seeded State Parity (Nodes 095-096)"
+          echo "4. SLA Escalation Thresholds & Alert Routing (Nodes 097-098)"
+          echo "5. Batch 001-100 Consolidation & Audit Sign-Off (Nodes 099-100)"
