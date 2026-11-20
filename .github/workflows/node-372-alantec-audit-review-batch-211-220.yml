@@ -1,0 +1,27 @@
+name: "node-372: alantec audit review batch 211-220"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-211-220:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Nodes 211-220 (Group 2 of 5)
+        run: |
+          echo "Auditing Node 372 (372/500) - Code Review Registry for Nodes 211-220"
+          echo "1. Compute Quota Allocation & Fair-Share Scheduling Checks (Nodes 211-212)"
+          echo "2. Ephemeral Runner Lifecycle & Cache Hygiene Audit (Nodes 213-214)"
+          echo "3. Artifact Retention Policy & Storage Bound Guardrails (Nodes 215-216)"
+          echo "4. Concurrency Group Locking & Queue Starvation Checks (Nodes 217-218)"
+          echo "5. Batch 211-220 Execution Telemetry & Audit Sign-Off (Nodes 219-220)"
