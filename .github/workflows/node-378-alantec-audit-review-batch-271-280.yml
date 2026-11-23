@@ -1,0 +1,26 @@
+name: "node-378: alantec audit review batch 271-280"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  audit-review-batch-271-280:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Sovereign Identity
+        run: |
+          git config --global user.name "Alantec Sovereign Engine"
+          git config --global user.email "ironlaris@alantec.org"
+
+      - name: Execute Code Review Audit for Batch 271-280 (Group 1 of 5)
+        run: |
+          echo "Auditing batch 271-280 for node-378"
+
+      - name: Execute Code Review Audit for Batch 271-280 (Group 2 of 5)
+        run: |
+          echo "Verifying batch 271-280 checkpoints for node-378"
